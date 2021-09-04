@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">MAD_Project</string>
+    <string name="tv_appname">Travel Guide</string>
+    <string name="tv_login_email">Enter Email</string>
+    <string name="tv_login_pwd">Enter Password</string>
+    <string name="btn_login">Sign in</string>
+    <string name="tv_login_signUpLink">Dont have an account? Sign Up</string>
+    <string name="tv_register_title">Sign Up</string>
+    <string name="tv_register_fullName">Enter Full name</string>
+    <string name="tv_register_email">Enter Email</string>
+    <string name="tv_register_uName">Enter Username</string>
+    <string name="btn_register_signUp">Sign UP</string>
+    <string name="tv_register_signInLink">Already have an account?Sign in</string>
 </resources>
