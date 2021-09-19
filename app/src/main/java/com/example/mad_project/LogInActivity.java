@@ -17,6 +17,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentReference;
 
 public class LogInActivity extends AppCompatActivity {
     private EditText mEmail,mPassword;
@@ -76,16 +77,15 @@ public class LogInActivity extends AppCompatActivity {
                     }
                 });
 
-                mRegisterLink.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        startActivity(new Intent(getApplicationContext(),RegisterActivity.class));
-                    }
-                });
-
-
-
             }
         });
+
+        mRegisterLink.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),RegisterActivity.class));
+            }
+        });
+
     }
 }
