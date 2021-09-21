@@ -88,6 +88,7 @@ public class RegisterActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()){
                             Toast.makeText(RegisterActivity.this,"User created",Toast.LENGTH_SHORT).show();
+
                             userId =mAuth.getCurrentUser().getUid();
                             DocumentReference documentReference = fStore.collection("Users").document(userId);
                             Map<String,Object> user =new HashMap<>();
