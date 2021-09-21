@@ -11,4 +11,8 @@
     <string name="tv_register_uName">Enter Username</string>
     <string name="btn_register_signUp">Sign UP</string>
     <string name="tv_register_signInLink">Already have an account?Sign in</string>
+    <string name="tab_home">Home</string>
+    <string name="tab_hotel">Hotels</string>
+    <string name="tab_article">Articles</string>
+    <string name="tab_service">Services</string>
 </resources>
