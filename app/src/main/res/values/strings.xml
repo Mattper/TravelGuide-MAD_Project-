@@ -15,4 +15,8 @@
     <string name="tab_hotel">Hotels</string>
     <string name="tab_article">Articles</string>
     <string name="tab_service">Services</string>
+    <string name="tv_article_title">Title</string>
+    <string name="tv_article_authorName">Author Name</string>
+    <string name="tv_article">Article</string>
+    <string name="btn_submit">Submit</string>
 </resources>
