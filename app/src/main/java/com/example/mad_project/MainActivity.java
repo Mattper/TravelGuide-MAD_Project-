@@ -1,39 +1,36 @@
 package com.example.mad_project;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentPagerAdapter;
-import androidx.viewpager.widget.ViewPager;
-import androidx.viewpager2.widget.ViewPager2;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 
-import com.google.android.material.tabs.TabLayout;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
 
-    private TabLayout tabLayout;
-    private ViewPager viewPager;
+    private ImageView mIVHotels,mIVArticles,mIVServices;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        tabLayout =findViewById(R.id.tabLayout);
-        viewPager =findViewById(R.id.viewPager);
+        mIVHotels =findViewById(R.id.main_hotels);
+        mIVArticles =findViewById(R.id.main_articles);
+        mIVServices =findViewById(R.id.main_services);
 
-        tabLayout.setupWithViewPager(viewPager);
+        mIVArticles.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),ArticlesListActivity.class));
+            }
+        });
 
-        FragmentAdapter adapter =new FragmentAdapter(getSupportFragmentManager(), FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
-        adapter.addFragment(new HomeFragment(),"Home");
-        adapter.addFragment(new HotelFragment(),"Hotels");
-        adapter.addFragment(new ArticleFragment(),"Articles");
-        adapter.addFragment(new ServiceFragment(),"Services");
-        viewPager.setAdapter(adapter);
-        
+
+
 
     }
 
