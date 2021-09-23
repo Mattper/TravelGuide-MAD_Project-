@@ -11,9 +11,9 @@
         android:theme="@style/Theme.MAD_Project">
         <activity android:name=".AddArticle"></activity>
         <activity android:name=".RegisterActivity" />
-        <activity android:name=".MainActivity" />
+        <activity android:name=".ArticlesListActivity" />
         <activity
-            android:name=".ArticlesListActivity"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

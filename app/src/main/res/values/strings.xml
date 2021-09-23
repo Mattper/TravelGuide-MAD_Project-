@@ -19,4 +19,5 @@
     <string name="tv_article_authorName">Author Name</string>
     <string name="tv_article">Article</string>
     <string name="btn_submit">Submit</string>
+    <string name="tv_main_title">Explore</string>
 </resources>
