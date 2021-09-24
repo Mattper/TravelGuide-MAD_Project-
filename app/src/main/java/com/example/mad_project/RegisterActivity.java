@@ -30,11 +30,11 @@ import static android.content.ContentValues.TAG;
 public class RegisterActivity extends AppCompatActivity {
     private EditText mFullname,mEmail,mPassword,mUsername;
     Button mRegisterBtn;
-    private TextView mLoginLink;
     private FirebaseAuth mAuth;
     FirebaseFirestore fStore;
     private ProgressBar mProgressBar;
     private String userId;
+    TextView mLoginLink;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +46,7 @@ public class RegisterActivity extends AppCompatActivity {
         mUsername= findViewById(R.id.tv_register_uName);
         mPassword=findViewById(R.id.tv_register_pwd);
         mRegisterBtn= findViewById(R.id.btn_register_signUp);
-        mLoginLink= findViewById(R.id.tv_register_signInLink);
+        mLoginLink = findViewById(R.id.tv_register_signInLink);
 
         fStore =FirebaseFirestore.getInstance();
         mAuth= FirebaseAuth.getInstance();
@@ -111,14 +111,13 @@ public class RegisterActivity extends AppCompatActivity {
 
             }
         });
-
         mLoginLink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(),LogInActivity.class));
+                finish();
             }
         });
-
 
     }
 }
