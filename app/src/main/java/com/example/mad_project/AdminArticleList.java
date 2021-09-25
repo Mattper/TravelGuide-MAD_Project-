@@ -49,7 +49,7 @@ public class AdminArticleList extends AppCompatActivity {
         showData();
     }
 
-    private void showData() {
+    public void showData() {
         fStore.collection("Articles").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {

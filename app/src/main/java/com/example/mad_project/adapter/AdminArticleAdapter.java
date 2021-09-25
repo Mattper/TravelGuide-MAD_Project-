@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -14,6 +15,10 @@ import com.example.mad_project.AdminArticleList;
 import com.example.mad_project.R;
 import com.example.mad_project.UpdateArticle;
 import com.example.mad_project.model.Article;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.List;
 
@@ -21,6 +26,7 @@ public class AdminArticleAdapter extends RecyclerView.Adapter<AdminArticleAdapte
 
     private AdminArticleList adminArticleList;
     private List<Article> mList;
+    private FirebaseFirestore fStore =FirebaseFirestore.getInstance();
 
     public AdminArticleAdapter(AdminArticleList adminArticleList,List<Article> mList){
         this.adminArticleList =adminArticleList;
@@ -40,6 +46,32 @@ public class AdminArticleAdapter extends RecyclerView.Adapter<AdminArticleAdapte
         adminArticleList.startActivity(intent);
     }
 
+    public void deleteData(int position){
+        Article article =mList.get(position);
+        fStore.collection("Articles").document(article.getId()).delete()
+                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        if (task.isSuccessful()){
+                            notifyRemoved(position);
+                            Toast.makeText(adminArticleList, "Article Deleted", Toast.LENGTH_SHORT).show();
+                        }else{
+                            Toast.makeText(adminArticleList, "Something went wrong!!!", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(adminArticleList,e.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+    private void notifyRemoved(int position){
+        mList.remove(position);
+        notifyItemRemoved(position);
+        adminArticleList.showData();
+    }
 
 
     @NonNull
