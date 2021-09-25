@@ -23,9 +23,9 @@ import java.util.Map;
 
 public class Booking extends AppCompatActivity {
     private EditText mFullname, mNIC, mMobilecontact, mHomecontact, mEmail, mNoofparticipants;
-   Button next;
+    Button next;
     private FirebaseAuth mAuth;
-    FirebaseFirestore fStore  ;
+    FirebaseFirestore fStore;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,9 +37,9 @@ public class Booking extends AppCompatActivity {
         mMobilecontact = findViewById(R.id.editTextmobile);
         mHomecontact = findViewById(R.id.editTexthome);
         mNoofparticipants = findViewById(R.id.editTextparticipants);
-        next =findViewById(R.id.next);
-        fStore =FirebaseFirestore.getInstance();
-        mAuth= FirebaseAuth.getInstance();
+        next = findViewById(R.id.save);
+        fStore = FirebaseFirestore.getInstance();
+        mAuth = FirebaseAuth.getInstance();
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -63,23 +63,24 @@ public class Booking extends AppCompatActivity {
                     return;
                 }
 
-                     String  userId =mAuth.getCurrentUser().getUid();
-                    DocumentReference documentReference = fStore.collection("Bookings").document();
-                    Map<String, Object> bookings = new HashMap<>();
-                    bookings.put("name", name);
-                    bookings.put("nic", nic);
-                    bookings.put("mobile", mobile);
-                    bookings.put("home", home);
-                    bookings.put("email", email);
-                    bookings.put("participants", participants);
-                    documentReference.set(bookings).addOnSuccessListener(new OnSuccessListener<Void>() {
-                        @Override
-                        public void onSuccess(Void unused) {
-                            Log.d(TAG, "onSuccess: booking is created for " + name);
-                            Toast.makeText(Booking.this, "Booking Created", Toast.LENGTH_SHORT).show();
-                        }
-                    });
-                    startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                String userId = mAuth.getCurrentUser().getUid();
+                DocumentReference documentReference = fStore.collection("Bookings").document();
+                Map<String, Object> bookings = new HashMap<>();
+                bookings.put("customerID", userId);
+                bookings.put("name", name);
+                bookings.put("nic", nic);
+                bookings.put("mobile", mobile);
+                bookings.put("home", home);
+                bookings.put("email", email);
+                bookings.put("participants", participants);
+                documentReference.set(bookings).addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void unused) {
+                        Log.d(TAG, "onSuccess: booking is created for " + name);
+                        Toast.makeText(Booking.this, "Booking Created", Toast.LENGTH_SHORT).show();
+                    }
+                });
+                startActivity(new Intent(getApplicationContext(), MainActivity.class));
 
 //                } catch (Exception e) {
 //                    Toast.makeText(Booking.this, "Error !" + e.getMessage(), Toast.LENGTH_SHORT).show();
