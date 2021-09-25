@@ -15,6 +15,7 @@
         <activity android:name=".AddArticle" />
         <activity android:name=".MainActivity" />
         <activity android:name=".ArticlesListActivity" />
+        <activity android:name=".Booking" />
         <activity
             android:name=".LogInActivity"
             android:exported="true">
