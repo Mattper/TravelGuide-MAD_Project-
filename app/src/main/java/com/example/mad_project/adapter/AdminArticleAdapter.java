@@ -1,5 +1,7 @@
 package com.example.mad_project.adapter;
 
+import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.mad_project.AdminArticleList;
 import com.example.mad_project.R;
+import com.example.mad_project.UpdateArticle;
 import com.example.mad_project.model.Article;
 
 import java.util.List;
@@ -23,6 +26,21 @@ public class AdminArticleAdapter extends RecyclerView.Adapter<AdminArticleAdapte
         this.adminArticleList =adminArticleList;
         this.mList =mList;
     }
+
+    //Updating Article
+    public void updateData(int position){
+        Article article =mList.get(position);
+        Bundle bundle =new Bundle();
+        bundle.putString("ArticleId",article.getId());
+        bundle.putString("ArticleTitle",article.getTitle());
+        bundle.putString("AuthorName",article.getAuthorName());
+        bundle.putString("Article",article.getArticle());
+        Intent intent =new Intent(adminArticleList, UpdateArticle.class);
+        intent.putExtras(bundle);
+        adminArticleList.startActivity(intent);
+    }
+
+
 
     @NonNull
     @Override
