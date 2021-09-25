@@ -6,12 +6,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ImageView mIVHotels,mIVArticles,mIVServices;
+    private ImageView mIVHotels,mIVArticles,mIVServices,mIVBookings;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,11 +22,36 @@ public class MainActivity extends AppCompatActivity {
         mIVHotels =findViewById(R.id.main_hotels);
         mIVArticles =findViewById(R.id.main_articles);
         mIVServices =findViewById(R.id.main_services);
+        mIVBookings =findViewById(R.id.main_bookings);
+
+
+        mIVHotels.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "Hotels list", Toast.LENGTH_SHORT).show();
+            }
+        });
 
         mIVArticles.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(),ArticlesListActivity.class));
+            }
+        });
+
+
+        mIVServices.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "Services list", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
+        mIVBookings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "Bookings list", Toast.LENGTH_SHORT).show();
             }
         });
 
