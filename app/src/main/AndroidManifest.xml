@@ -9,8 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MAD_Project">
-        <activity android:name=".RegisterActivity"/>
-        <activity android:name=".AddArticle"/>
+        <activity android:name=".ShowServices"></activity>
+        <activity android:name=".AddServices" />
+        <activity android:name=".AddService" />
+        <activity android:name=".model.AddService" />
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".AddArticle" />
         <activity android:name=".MainActivity" />
         <activity android:name=".ArticlesListActivity" />
         <activity
