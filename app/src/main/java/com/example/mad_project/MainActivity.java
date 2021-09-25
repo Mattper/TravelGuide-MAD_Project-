@@ -30,15 +30,12 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-
-
     }
 
-    public void logout(View view){
-        FirebaseAuth.getInstance().signOut();
-        startActivity(new Intent(getApplicationContext(),LogInActivity.class));
-        finish();
+    public void viewUserProfile(View view){
+        startActivity(new Intent(getApplicationContext(),UserProfile.class));
     }
+
 
 
 }
