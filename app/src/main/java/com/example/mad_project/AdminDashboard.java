@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.example.mad_project.adminArticle.adminArticleList;
+
 
 public class AdminDashboard extends AppCompatActivity {
     CardView mCardHotel;
@@ -31,7 +31,7 @@ public class AdminDashboard extends AppCompatActivity {
         mCardBookings =findViewById(R.id.card_bookings);
 
         //on click listener for Hotels
-        mCardArticle.setOnClickListener(new View.OnClickListener() {
+        mCardHotel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(AdminDashboard.this, "Hotels admin", Toast.LENGTH_SHORT).show();
@@ -39,7 +39,7 @@ public class AdminDashboard extends AppCompatActivity {
         });
 
         //on click listener for Services
-        mCardArticle.setOnClickListener(new View.OnClickListener() {
+        mCardService.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(AdminDashboard.this, "Services admin", Toast.LENGTH_SHORT).show();
@@ -50,12 +50,12 @@ public class AdminDashboard extends AppCompatActivity {
         mCardArticle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(),adminArticleList.class));
+                startActivity(new Intent(getApplicationContext(),AdminArticleList.class));
             }
         });
 
         //on click listener for Bookings
-        mCardArticle.setOnClickListener(new View.OnClickListener() {
+        mCardBookings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(AdminDashboard.this, "Bookings admin", Toast.LENGTH_SHORT).show();

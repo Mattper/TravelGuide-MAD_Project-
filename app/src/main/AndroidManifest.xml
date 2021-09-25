@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MAD_Project">
-        <activity android:name=".adminArticle.adminArticleList"></activity>
+        <activity android:name=".AdminArticleList"></activity>
         <activity android:name=".AdminDashboard" />
         <activity android:name=".UserProfile" />
         <activity android:name=".RegisterActivity" />
