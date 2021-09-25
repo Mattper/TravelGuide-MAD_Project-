@@ -23,4 +23,9 @@
     <string name="tv_UProfile_title">User Profile</string>
     <string name="btn_logout">Logout</string>
     <string name="btn_admin_logout">Logout</string>
+    <string name="tv_admin_adminDashboard">Admin Dashboard</string>
+    <string name="tv_admin_hotel">Hotels</string>
+    <string name="tv_admin_service">Service</string>
+    <string name="tv_admin_article">Articles</string>
+    <string name="tv_admin_booking">Bookings</string>
 </resources>
