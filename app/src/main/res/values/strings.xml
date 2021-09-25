@@ -28,4 +28,5 @@
     <string name="tv_admin_service">Service</string>
     <string name="tv_admin_article">Articles</string>
     <string name="tv_admin_booking">Bookings</string>
+    <string name="btn_update">Update Article</string>
 </resources>

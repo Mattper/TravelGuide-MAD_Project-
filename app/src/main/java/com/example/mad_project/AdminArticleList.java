@@ -2,12 +2,14 @@ package com.example.mad_project;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.widget.Toast;
 
+import com.example.mad_project.Helper.TouchHelper;
 import com.example.mad_project.adapter.AdminArticleAdapter;
 import com.example.mad_project.model.Article;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -41,6 +43,9 @@ public class AdminArticleList extends AppCompatActivity {
         adapter =new AdminArticleAdapter(this, list);
         recyclerView.setAdapter(adapter);
 
+        ItemTouchHelper touchHelper =new ItemTouchHelper(new TouchHelper(adapter));
+        touchHelper.attachToRecyclerView(recyclerView);
+
         showData();
     }
 
@@ -50,7 +55,7 @@ public class AdminArticleList extends AppCompatActivity {
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
                 list.clear();
                 for (DocumentSnapshot snapshot : task.getResult()){
-                    Article article =new Article(snapshot.getString("id"),
+                    Article article =new Article(snapshot.getString("ArticleId"),
                             snapshot.getString("ArticleTitle"),
                             snapshot.getString("AuthorName"));
                     list.add(article);
