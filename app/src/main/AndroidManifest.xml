@@ -11,6 +11,7 @@
         android:theme="@style/Theme.MAD_Project">
         <activity android:name=".UpdateArticle"></activity>
         <activity android:name=".AdminArticleList" />
+        <activity android:name=".ArticleDetails" />
         <activity android:name=".AdminDashboard" />
         <activity android:name=".UserProfile" />
         <activity android:name=".RegisterActivity" />

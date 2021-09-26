@@ -12,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.mad_project.AdminArticleList;
+import com.example.mad_project.ArticleDetails;
 import com.example.mad_project.R;
 import com.example.mad_project.UpdateArticle;
 import com.example.mad_project.model.Article;
@@ -24,13 +25,13 @@ import java.util.List;
 
 public class AdminArticleAdapter extends RecyclerView.Adapter<AdminArticleAdapter.adminArticleViewHolder> {
 
-    private AdminArticleList adminArticleList;
-    private List<Article> mList;
+    private static  AdminArticleList adminArticleList;
+    private static List<Article> mList;
     private FirebaseFirestore fStore =FirebaseFirestore.getInstance();
 
     public AdminArticleAdapter(AdminArticleList adminArticleList,List<Article> mList){
-        this.adminArticleList =adminArticleList;
-        this.mList =mList;
+        AdminArticleAdapter.adminArticleList =adminArticleList;
+        AdminArticleAdapter.mList =mList;
     }
 
     //Updating Article
@@ -46,6 +47,7 @@ public class AdminArticleAdapter extends RecyclerView.Adapter<AdminArticleAdapte
         adminArticleList.startActivity(intent);
     }
 
+    //Deleting data
     public void deleteData(int position){
         Article article =mList.get(position);
         fStore.collection("Articles").document(article.getId()).delete()
@@ -98,6 +100,24 @@ public class AdminArticleAdapter extends RecyclerView.Adapter<AdminArticleAdapte
 
         public adminArticleViewHolder(@NonNull View itemView) {
             super(itemView);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Article article =mList.get(getAbsoluteAdapterPosition());
+                    Bundle bundle =new Bundle();
+                    bundle.putString("ArticleId",article.getId());
+                    bundle.putString("ArticleTitle",article.getTitle());
+                    bundle.putString("AuthorName",article.getAuthorName());
+                    bundle.putString("Article",article.getArticle());
+                    Intent intent =new Intent(adminArticleList, ArticleDetails.class);
+                    intent.putExtras(bundle);
+                    adminArticleList.startActivity(intent);
+                }
+            });
+
+
+
 
             title =itemView.findViewById(R.id.card_articleTitle);
             authorName =itemView.findViewById(R.id.card_articleAuthorName);

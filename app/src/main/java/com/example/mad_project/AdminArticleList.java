@@ -2,11 +2,16 @@ package com.example.mad_project;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.example.mad_project.Helper.TouchHelper;
@@ -24,6 +29,7 @@ import java.util.List;
 
 public class AdminArticleList extends AppCompatActivity {
 
+    private Toolbar toolBar;
     private RecyclerView recyclerView;
     private FirebaseFirestore fStore;
     private AdminArticleAdapter adapter;
@@ -33,6 +39,9 @@ public class AdminArticleList extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_article_list);
+
+        toolBar =findViewById(R.id.toolBarAdmin);
+        setSupportActionBar(toolBar);
 
         recyclerView =findViewById(R.id.admin_article_recyclerView);
         recyclerView.setHasFixedSize(true);
@@ -68,5 +77,29 @@ public class AdminArticleList extends AppCompatActivity {
                 Toast.makeText(AdminArticleList.this, "Error!!!", Toast.LENGTH_SHORT).show();
             }
         });
+    }
+
+    //toolbar menu
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater =getMenuInflater();
+        inflater.inflate(R.menu.toolbar_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.menu_search:
+                Toast.makeText(this, "Search!!", Toast.LENGTH_SHORT).show();
+                return true;
+
+            case R.id.menu_addArticle:
+                startActivity(new Intent(getApplicationContext(),AddArticle.class));
+                return true;
+
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }

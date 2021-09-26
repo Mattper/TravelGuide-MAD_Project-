@@ -29,4 +29,7 @@
     <string name="tv_admin_article">Articles</string>
     <string name="tv_admin_booking">Bookings</string>
     <string name="btn_update">Update Article</string>
+    <string name="tv_user_fname">Full Name</string>
+    <string name="tv_user_email">Email</string>
+    <string name="tv_user_uname">Username</string>
 </resources>
