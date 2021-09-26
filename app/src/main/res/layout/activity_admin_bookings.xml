@@ -130,8 +130,8 @@
 
     <Button
         android:id="@+id/edit1"
-        android:layout_width="103dp"
-        android:layout_height="40dp"
+        android:layout_width="95dp"
+        android:layout_height="41dp"
         android:layout_marginTop="188dp"
         android:text="EDIT"
         app:layout_constraintHorizontal_bias="0.662"
@@ -154,6 +154,7 @@
         android:id="@+id/edit2"
         android:layout_width="95dp"
         android:layout_height="41dp"
+        android:layout_marginStart="4dp"
         android:layout_marginTop="248dp"
         android:text="EDIT"
         app:layout_constraintHorizontal_bias="0.616"
@@ -167,7 +168,6 @@
         android:layout_width="95dp"
         android:layout_height="41dp"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="12dp"
         android:text="DELETE"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/delete1" />
@@ -188,7 +188,6 @@
         android:layout_width="95dp"
         android:layout_height="41dp"
         android:layout_marginTop="12dp"
-        android:layout_marginEnd="12dp"
         android:text="DELETE"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/delete2" />
@@ -209,7 +208,6 @@
         android:layout_width="95dp"
         android:layout_height="41dp"
         android:layout_marginTop="24dp"
-        android:layout_marginEnd="12dp"
         android:text="DELETE"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/delete3" />
@@ -230,18 +228,17 @@
         android:layout_width="95dp"
         android:layout_height="41dp"
         android:layout_marginTop="24dp"
-        android:layout_marginEnd="12dp"
         android:text="DELETE"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/delete4" />
 
     <Button
         android:id="@+id/edit6"
-        android:layout_width="97dp"
-        android:layout_height="43dp"
+        android:layout_width="95dp"
+        android:layout_height="41dp"
         android:layout_marginTop="484dp"
         android:text="EDIT"
-        app:layout_constraintHorizontal_bias="0.626"
+        app:layout_constraintHorizontal_bias="0.672"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -251,7 +248,6 @@
         android:layout_width="95dp"
         android:layout_height="41dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="12dp"
         android:text="DELETE"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/delete5" />
@@ -272,22 +268,8 @@
         android:layout_width="95dp"
         android:layout_height="41dp"
         android:layout_marginTop="24dp"
-        android:layout_marginEnd="12dp"
         android:text="DELETE"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/delete6" />
-
-    <Button
-        android:id="@+id/addnew"
-        android:layout_width="111dp"
-        android:layout_height="49dp"
-        android:layout_marginTop="108dp"
-        android:background="#088579"
-        android:backgroundTint="#009688"
-        android:text="ADD NEW"
-        app:layout_constraintHorizontal_bias="0.9"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

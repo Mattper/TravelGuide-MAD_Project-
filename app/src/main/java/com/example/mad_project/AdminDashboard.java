@@ -58,7 +58,7 @@ public class AdminDashboard extends AppCompatActivity {
         mCardBookings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(AdminDashboard.this, "Bookings admin", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(getApplicationContext(),AdminBookingList.class));
             }
         });
 
