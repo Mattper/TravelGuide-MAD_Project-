@@ -33,7 +33,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         bundle.putString("uId" , item.getId());
         bundle.putString("uTitle" , item.getTitle());
         bundle.putString("uDesc" , item.getDesc());
-        Intent intent = new Intent(activity , MainActivity.class);
+        Intent intent = new Intent(activity , AddServices.class);
         intent.putExtras(bundle);
         activity.startActivity(intent);
     }
