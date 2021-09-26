@@ -30,6 +30,9 @@
         <activity android:name=".BookingEdit" />
         <activity android:name=".AdminBookingList" />
         <activity android:name=".AdminBookingEdit" />
+        <activity android:name=".model.HotelActivity"/>
+        <activity android:name=".model.ViewHotelActivity" />
+        <activity android:name=".model.AddEditHotelActivity" />
         <activity
             android:name=".LogInActivity"
             android:exported="true">
