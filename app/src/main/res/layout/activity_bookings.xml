@@ -54,8 +54,8 @@
         android:id="@+id/booking1"
         android:layout_width="151dp"
         android:layout_height="33dp"
-        android:layout_marginTop="192dp"
-        app:layout_constraintHorizontal_bias="0.203"
+        android:layout_marginTop="188dp"
+        app:layout_constraintHorizontal_bias="0.111"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -65,76 +65,76 @@
         android:layout_width="151dp"
         android:layout_height="33dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.203"
+        app:layout_constraintHorizontal_bias="0.111"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/booking1"
-        app:layout_constraintVertical_bias="0.027" />
+        app:layout_constraintVertical_bias="0.056" />
+
 
     <TextView
         android:id="@+id/booking3"
         android:layout_width="151dp"
         android:layout_height="33dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.203"
+        app:layout_constraintHorizontal_bias="0.111"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/booking2"
-        app:layout_constraintVertical_bias="0.039" />
-
+        app:layout_constraintVertical_bias="0.071" />
 
     <TextView
         android:id="@+id/booking4"
         android:layout_width="151dp"
         android:layout_height="33dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.203"
+        app:layout_constraintHorizontal_bias="0.111"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/booking3"
-        app:layout_constraintVertical_bias="0.116" />
+        app:layout_constraintVertical_bias="0.079" />
 
     <TextView
         android:id="@+id/booking5"
         android:layout_width="151dp"
         android:layout_height="33dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.203"
+        app:layout_constraintHorizontal_bias="0.111"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/booking4"
-        app:layout_constraintVertical_bias="0.103" />
+        app:layout_constraintVertical_bias="0.105" />
+
 
     <TextView
         android:id="@+id/booking6"
         android:layout_width="151dp"
         android:layout_height="33dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.203"
+        app:layout_constraintHorizontal_bias="0.111"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/booking5"
-        app:layout_constraintVertical_bias="0.131" />
-
+        app:layout_constraintVertical_bias="0.126" />
 
     <TextView
         android:id="@+id/booking7"
         android:layout_width="151dp"
         android:layout_height="33dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.203"
+        app:layout_constraintHorizontal_bias="0.111"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/booking6"
-        app:layout_constraintVertical_bias="0.174" />
+        app:layout_constraintVertical_bias="0.191" />
 
     <Button
         android:id="@+id/edit1"
-        android:layout_width="103dp"
-        android:layout_height="40dp"
+        android:layout_width="95dp"
+        android:layout_height="41dp"
         android:layout_marginTop="188dp"
         android:text="EDIT"
-        app:layout_constraintHorizontal_bias="0.662"
+        app:layout_constraintHorizontal_bias="0.623"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -145,7 +145,7 @@
         android:layout_height="41dp"
         android:layout_marginTop="188dp"
         android:text="DELETE"
-        app:layout_constraintHorizontal_bias="0.996"
+        app:layout_constraintHorizontal_bias="0.962"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -154,6 +154,7 @@
         android:id="@+id/edit2"
         android:layout_width="95dp"
         android:layout_height="41dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="248dp"
         android:text="EDIT"
         app:layout_constraintHorizontal_bias="0.616"
@@ -166,7 +167,7 @@
         android:id="@+id/delete2"
         android:layout_width="95dp"
         android:layout_height="41dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="12dp"
         android:text="DELETE"
         app:layout_constraintEnd_toEndOf="parent"
@@ -176,9 +177,9 @@
         android:id="@+id/edit3"
         android:layout_width="95dp"
         android:layout_height="41dp"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="308dp"
         android:text="EDIT"
-        app:layout_constraintHorizontal_bias="0.662"
+        app:layout_constraintHorizontal_bias="0.623"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -187,8 +188,8 @@
         android:id="@+id/delete3"
         android:layout_width="95dp"
         android:layout_height="41dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="12dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
         android:text="DELETE"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/delete2" />
@@ -197,9 +198,9 @@
         android:id="@+id/edit4"
         android:layout_width="95dp"
         android:layout_height="41dp"
-        android:layout_marginTop="364dp"
+        android:layout_marginTop="372dp"
         android:text="EDIT"
-        app:layout_constraintHorizontal_bias="0.662"
+        app:layout_constraintHorizontal_bias="0.62"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -218,9 +219,9 @@
         android:id="@+id/edit5"
         android:layout_width="95dp"
         android:layout_height="41dp"
-        android:layout_marginTop="428dp"
+        android:layout_marginTop="432dp"
         android:text="EDIT"
-        app:layout_constraintHorizontal_bias="0.662"
+        app:layout_constraintHorizontal_bias="0.623"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -229,7 +230,7 @@
         android:id="@+id/delete5"
         android:layout_width="95dp"
         android:layout_height="41dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="12dp"
         android:text="DELETE"
         app:layout_constraintEnd_toEndOf="parent"
@@ -239,9 +240,9 @@
         android:id="@+id/edit6"
         android:layout_width="97dp"
         android:layout_height="43dp"
-        android:layout_marginTop="484dp"
+        android:layout_marginTop="496dp"
         android:text="EDIT"
-        app:layout_constraintHorizontal_bias="0.626"
+        app:layout_constraintHorizontal_bias="0.627"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -250,7 +251,7 @@
         android:id="@+id/delete6"
         android:layout_width="95dp"
         android:layout_height="41dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="28dp"
         android:layout_marginEnd="12dp"
         android:text="DELETE"
         app:layout_constraintEnd_toEndOf="parent"
@@ -260,9 +261,9 @@
         android:id="@+id/edit7"
         android:layout_width="95dp"
         android:layout_height="41dp"
-        android:layout_marginTop="548dp"
+        android:layout_marginTop="560dp"
         android:text="EDIT"
-        app:layout_constraintHorizontal_bias="0.662"
+        app:layout_constraintHorizontal_bias="0.62"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -271,8 +272,8 @@
         android:id="@+id/delete7"
         android:layout_width="95dp"
         android:layout_height="41dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="12dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
         android:text="DELETE"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/delete6" />
