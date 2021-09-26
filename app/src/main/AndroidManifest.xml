@@ -28,6 +28,8 @@
         <activity android:name=".Booking" />
         <activity android:name=".BookingList" />
         <activity android:name=".BookingEdit" />
+        <activity android:name=".AdminBookingList" />
+        <activity android:name=".AdminBookingEdit" />
         <activity
             android:name=".LogInActivity"
             android:exported="true">
