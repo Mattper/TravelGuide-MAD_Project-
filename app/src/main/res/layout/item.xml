@@ -4,7 +4,7 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardElevation="8dp"
-    android:layout_margin="13dp"
+    android:layout_margin="13dp">
 
 
 <LinearLayout
@@ -16,9 +16,9 @@ android:orientation="vertical">
 <TextView
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="Title..."
+    android:text="Title..."
     android:textSize="24sp"
-    android:textcolor="#000"
+    android:textColor="#000"
     android:padding="8dp"
     android:id="@+id/title_text"/>
 
@@ -26,11 +26,12 @@ android:orientation="vertical">
 <TextView
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="Description...."
-    android:textSize="18sp"
-    android:textcolor="#000"
+    android:text="Descrription..."
+    android:textSize="24sp"
+    android:textColor="#000"
     android:padding="8dp"
-    android:id="@+id/desc_text"/>
+    android:id="@+id/title_text"/>
+
 
 
 </LinearLayout>
