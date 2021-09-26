@@ -31,7 +31,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/iv_main_UserProfile"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginTop="20dp"
@@ -42,7 +42,8 @@
         app:layout_constraintStart_toEndOf="@+id/tv_main_title"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/ic_baseline_account_circle_24" />
+        app:srcCompat="@drawable/ic_baseline_account_circle_24"
+        android:onClick="viewUserProfile"/>
 
     <RelativeLayout
         android:id="@+id/relativeLayout"
@@ -176,6 +177,37 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:text="Services"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
+
+            <RelativeLayout
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:elevation="4dp">
+
+                <ImageView
+                    android:id="@+id/main_bookings"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_baseline_book_24" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="Bookings"
                 android:textAlignment="center" />
         </LinearLayout>
 

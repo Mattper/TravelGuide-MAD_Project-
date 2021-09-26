@@ -95,6 +95,10 @@ public class RegisterActivity extends AppCompatActivity {
                             user.put("fName",fName);
                             user.put("Uname",uName);
                             user.put("email",email);
+
+                            //specify user access level
+                            user.put("isUser","1");
+
                             documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
                                 @Override
                                 public void onSuccess(Void unused) {
@@ -115,7 +119,6 @@ public class RegisterActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(),LogInActivity.class));
-                finish();
             }
         });
 
