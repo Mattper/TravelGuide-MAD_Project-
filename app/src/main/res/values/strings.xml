@@ -20,4 +20,16 @@
     <string name="tv_article">Article</string>
     <string name="btn_submit">Submit</string>
     <string name="tv_main_title">Explore</string>
+    <string name="tv_UProfile_title">User Profile</string>
+    <string name="btn_logout">Logout</string>
+    <string name="btn_admin_logout">Logout</string>
+    <string name="tv_admin_adminDashboard">Admin Dashboard</string>
+    <string name="tv_admin_hotel">Hotels</string>
+    <string name="tv_admin_service">Service</string>
+    <string name="tv_admin_article">Articles</string>
+    <string name="tv_admin_booking">Bookings</string>
+    <string name="btn_update">Update Article</string>
+    <string name="tv_user_fname">Full Name</string>
+    <string name="tv_user_email">Email</string>
+    <string name="tv_user_uname">Username</string>
 </resources>

@@ -14,10 +14,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 public class LogInActivity extends AppCompatActivity {
     private EditText mEmail,mPassword;
@@ -25,6 +28,7 @@ public class LogInActivity extends AppCompatActivity {
     private TextView mRegisterLink;
 
     private FirebaseAuth mAuth;
+    private FirebaseFirestore fStore;
     private ProgressBar mProgressBar;
 
     @Override
@@ -38,6 +42,7 @@ public class LogInActivity extends AppCompatActivity {
         mRegisterLink =findViewById(R.id.tv_login_signUpLink);
 
         mAuth =FirebaseAuth.getInstance();
+        fStore =FirebaseFirestore.getInstance();
         mProgressBar =findViewById(R.id.login_progressBar);
 
         mLoginBtn.setOnClickListener(new View.OnClickListener() {
@@ -69,7 +74,8 @@ public class LogInActivity extends AppCompatActivity {
                     public void onComplete(@NonNull  Task<AuthResult> task) {
                         if (task.isSuccessful()){
                             Toast.makeText(LogInActivity.this,"Login Successful!",Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                            checkUserAccessLevel(mAuth.getUid());
+                            //startActivity(new Intent(getApplicationContext(),MainActivity.class));
 
                         }else{
                             Toast.makeText(LogInActivity.this, "Error !" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
@@ -84,9 +90,29 @@ public class LogInActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(),RegisterActivity.class));
-                finish();
             }
         });
 
     }
+
+    private void checkUserAccessLevel(String uId){
+        DocumentReference documentReference =fStore.collection("Users").document(uId);
+        documentReference.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+            @Override
+            public void onSuccess(DocumentSnapshot documentSnapshot) {
+                if (documentSnapshot.getString("isAdmin") != null){
+                    startActivity(new Intent(getApplicationContext(),AdminDashboard.class));
+                    finish();
+                }
+
+                if (documentSnapshot.getString("isUser") != null){
+                    startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                    finish();
+                }
+            }
+        });
+    }
+
+
+
 }
