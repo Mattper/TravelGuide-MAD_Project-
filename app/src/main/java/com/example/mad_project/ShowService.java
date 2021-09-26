@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import android.widget.Toast;
 
+import com.example.mad_project.Helper.TouchHelper;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
@@ -40,8 +41,6 @@ public class ShowService extends AppCompatActivity {
         adapter = new MyAdapter(this , list);
         recyclerView.setAdapter(adapter);
 
-        ItemTouchHelper touchHelper = new ItemTouchHelper(new TouchHelper(adapter));
-        touchHelper.attachToRecyclerView(recyclerView);
         showData();
     }
 

@@ -53,8 +53,9 @@ public class UserProfile extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 fAuth.signOut();
-                startActivity(new Intent(getApplicationContext(),LogInActivity.class));
                 Toast.makeText(UserProfile.this, "User Logged Out.", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(getApplicationContext(),LogInActivity.class));
+
             }
         });
 

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddService">
+    tools:context=".AddServices">
 
     <EditText
         android:id="@+id/edit_title"
@@ -22,7 +22,7 @@
     <EditText
         android:id="@+id/edit_desc"
         android:layout_width="0dp"
-        android:layout_height="280dp "
+        android:layout_height="280dp"
         android:layout_marginTop="46dp"
         android:ems="10"
         android:hint="Enter Description "
