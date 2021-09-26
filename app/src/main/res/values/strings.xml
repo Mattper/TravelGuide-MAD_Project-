@@ -32,4 +32,6 @@
     <string name="tv_user_fname">Full Name</string>
     <string name="tv_user_email">Email</string>
     <string name="tv_user_uname">Username</string>
+    <string name="save_btn">Save</string>
+
 </resources>
