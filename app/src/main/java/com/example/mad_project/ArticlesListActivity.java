@@ -61,9 +61,10 @@ public class ArticlesListActivity extends AppCompatActivity {
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
                 articleList.clear();
                 for (DocumentSnapshot snapshot : task.getResult()){
-                    Article article =new Article(snapshot.getString("id"),
+                    Article article =new Article(snapshot.getString("ArticleId"),
                             snapshot.getString("ArticleTitle"),
-                            snapshot.getString("AuthorName"));
+                            snapshot.getString("AuthorName"),
+                            snapshot.getString("Article"));
                     articleList.add(article);
                 }
                 articleAdapter.notifyDataSetChanged();

@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardElevation="8dp"
-    android:layout_margin="10dp">
+    android:layout_width="400dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    app:cardElevation="8dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Title"
-            android:textSize="24sp"
-            android:padding="8dp"
-            android:id="@+id/card_articleTitle"/>
+            <TextView
+                android:id="@+id/card_articleTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="Title"
+                android:textSize="24sp" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Author Name"
-            android:textSize="16sp"
-            android:padding="8dp"
-            android:id="@+id/card_articleAuthorName"/>
+            <TextView
+                android:id="@+id/card_articleAuthorName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="Author Name"
+                android:textSize="16sp" />
 
 
     </LinearLayout>
