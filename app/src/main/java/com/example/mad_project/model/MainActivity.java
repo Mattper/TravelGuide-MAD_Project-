@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
 
-        Intent intent = new Intent(this,HotelActivity.class);
+        Intent intent = new Intent(this, com.example.hotel.HotelActivity.class);
         if (username.getText().toString().equals("admin") && password.getText().toString().equals("admin")) {
             intent.putExtra("isAdmin", true);
         } else {

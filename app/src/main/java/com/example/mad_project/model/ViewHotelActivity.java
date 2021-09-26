@@ -20,7 +20,7 @@ public class ViewHotelActivity extends AppCompatActivity implements View.OnClick
     TextView contact;
     TextView facilities;
     TextView hrn;
-    HotelModel model;
+    com.example.hotel.HotelModel model;
     Button delete;
     Button edit;
     @Override
@@ -33,8 +33,8 @@ public class ViewHotelActivity extends AppCompatActivity implements View.OnClick
         contact = findViewById(R.id.viewcontact);
         facilities = findViewById(R.id.viewfacilities);
 
-        model = (HotelModel) getIntent().getSerializableExtra("object");
-        model = (HotelModel) getIntent().getSerializableExtra("object");
+        model = (com.example.hotel.HotelModel) getIntent().getSerializableExtra("object");
+        model = (com.example.hotel.HotelModel) getIntent().getSerializableExtra("object");
         name.setText(model.getName());
         address.setText(model.getAddress());
         owner.setText(model.getOwner());

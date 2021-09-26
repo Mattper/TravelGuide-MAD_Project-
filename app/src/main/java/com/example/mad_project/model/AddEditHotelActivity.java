@@ -23,7 +23,7 @@ import java.io.IOException;
 import java.util.UUID;
 
 public class AddEditHotelActivity extends AppCompatActivity implements View.OnClickListener {
-    DatabaseReference databaseReference;
+    Databasereference databaseReference;
     Button uploadBtn;
     Button addBtn;
     EditText name;
@@ -32,7 +32,7 @@ public class AddEditHotelActivity extends AppCompatActivity implements View.OnCl
     EditText contact;
     EditText facilities;
     EditText hrn;
-    HotelModel model;
+    com.example.hotel.HotelModel model;
     boolean add = true;
     Uri filePath;
 
@@ -57,7 +57,7 @@ public class AddEditHotelActivity extends AppCompatActivity implements View.OnCl
         uploadBtn.setOnClickListener(this);
         databaseReference = FirebaseDatabase.getInstance().getReference("hotel");
         if (getIntent().hasExtra("object")) {
-            model = (HotelModel) getIntent().getSerializableExtra("object");
+            model = (com.example.hotel.HotelModel) getIntent().getSerializableExtra("object");
             name.setText(model.getName());
             address.setText(model.getAddress());
             owner.setText(model.getOwner());
@@ -202,7 +202,7 @@ public class AddEditHotelActivity extends AppCompatActivity implements View.OnCl
         }
         if (v.getId() == addBtn.getId()) {
             if (add) {
-                model = new HotelModel(databaseReference.push().getKey(), name.getText().toString(), address.getText().toString(), owner.getText().toString(), contact.getText().toString(), facilities.getText().toString(), hrn.getText().toString());
+                model = new com.example.hotel.HotelModel(databaseReference.push().getKey(), name.getText().toString(), address.getText().toString(), owner.getText().toString(), contact.getText().toString(), facilities.getText().toString(), hrn.getText().toString());
 
             } else {
                 model.update(name.getText().toString(), address.getText().toString(), owner.getText().toString(), contact.getText().toString(), facilities.getText().toString(), hrn.getText().toString());

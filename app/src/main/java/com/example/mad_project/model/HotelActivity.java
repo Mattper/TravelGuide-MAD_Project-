@@ -22,7 +22,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
-public class otelActivity extends AppCompatActivity implements View.OnClickListener {
+public class HotelActivity extends AppCompatActivity implements View.OnClickListener {
     ListView listView;
     DatabaseReference databaseReference;
     List<com.example.hotel.HotelModel> list;
@@ -87,7 +87,7 @@ public class otelActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        Intent intent = new Intent(this, com.example.hotel.AddEditHotelActivity.class);
+        Intent intent = new Intent(this, AddEditHotelActivity.class);
         startActivity(intent);
     }
 
