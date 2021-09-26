@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
         mIVBookings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "Bookings list", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(getApplicationContext(),BookingList.class));
             }
         });
 
