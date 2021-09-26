@@ -39,13 +39,15 @@ public class UserProfile extends AppCompatActivity {
         fStore =FirebaseFirestore.getInstance();
         userId =fAuth.getCurrentUser().getUid();
 
+
+
         DocumentReference documentReference =fStore.collection("Users").document(userId);
         documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
             @Override
             public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
-                mFname.setText(value.getString("fName"));
-                mEmail.setText(value.getString("email"));
-                mUname.setText(value.getString("Uname"));
+                    mFname.setText(value.getString("fName"));
+                    mEmail.setText(value.getString("email"));
+                    mUname.setText(value.getString("Uname"));
             }
         });
 

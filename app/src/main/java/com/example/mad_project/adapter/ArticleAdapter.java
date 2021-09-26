@@ -70,6 +70,7 @@ public class ArticleAdapter extends RecyclerView.Adapter<ArticleAdapter.ArticleV
             title =itemView.findViewById(R.id.card_articleTitle);
             authorName =itemView.findViewById(R.id.card_articleAuthorName);
 
+
         }
     }
 

@@ -25,16 +25,17 @@ public class ArticleDetails extends AppCompatActivity {
 
         mTitle =findViewById(R.id.tv_adetails_title);
         mAuthorName =findViewById(R.id.tv_adetails_authorName);
+        mArticle =findViewById(R.id.tv_adetails_article);
 
         Bundle bundle =getIntent().getExtras();
         if (bundle != null){
             uId = bundle.getString("ArticleId");
             uTitle =bundle.getString("ArticleTitle");
             uAuthorName =bundle.getString("AuthorName");
-            //uArticle =bundle.getString("Article");
+            uArticle =bundle.getString("Article");
             mTitle.setText(uTitle);
             mAuthorName.setText(uAuthorName);
-            //mArticle.setText(uArticle);
+            mArticle.setText(uArticle);
         }else{
             Toast.makeText(this, "Something went wrong!!!", Toast.LENGTH_SHORT).show();
         }

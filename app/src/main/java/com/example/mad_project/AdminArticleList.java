@@ -67,6 +67,7 @@ public class AdminArticleList extends AppCompatActivity {
                     Article article =new Article(snapshot.getString("ArticleId"),
                             snapshot.getString("ArticleTitle"),
                             snapshot.getString("AuthorName"));
+                            snapshot.getString("Article");
                     list.add(article);
                 }
                 adapter.notifyDataSetChanged();
