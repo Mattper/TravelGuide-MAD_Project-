@@ -12,7 +12,6 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.FirebaseFirestore;
 
@@ -22,20 +21,21 @@ import java.util.UUID;
 public class AddServices  extends AppCompatActivity {
 
     private EditText mTitle , mDesc;
-    private Button mSaveBtn, mShowBtn;
+    Button mSaveBtn, mShowBtn;
     private FirebaseFirestore db;
     private String uTitle, uDesc , uId;
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_add_services);
 
         mTitle = findViewById(R.id.edit_title);
         mDesc = findViewById(R.id.edit_desc);
-        mSaveBtn = findViewById(R.id.save_btn);
         mShowBtn = findViewById(R.id.showall_btn);
+        mSaveBtn =findViewById(R.id.save_Btn);
 
         db= FirebaseFirestore.getInstance();
 
